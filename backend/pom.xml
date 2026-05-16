@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+        WHAT IS THIS FILE?
+        ===================
+        pom.xml is the Maven build file. Think of it as package.json for Java.
+        It defines:
+        - Project metadata (name, version)
+        - Parent (Spring Boot gives us auto-configuration magic)
+        - Dependencies (libraries we need)
+        - Java version to use
+    -->
+
+    <!-- Spring Boot Parent: Provides default configurations and dependency versions -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.1</version>
+        <relativePath/> <!-- Lookup parent from Maven repository -->
+    </parent>
+
+    <!-- Project Metadata -->
+    <groupId>com.taskflow</groupId>
+    <artifactId>taskflow-backend</artifactId>
+    <version>1.0.0</version>
+    <name>TaskFlow Backend</name>
+    <description>Spring Boot REST API for TaskFlow To-Do Application</description>
+
+    <!-- Java Version -->
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <!--
+        DEPENDENCIES
+        ============
+        These are the libraries our project needs. Spring Boot parent
+        manages versions for us, so we don't need to specify version numbers.
+    -->
+    <dependencies>
+
+        <!--
+            1. Spring Web Starter
+            - Gives us: @RestController, @GetMapping, @PostMapping, etc.
+            - Includes: Embedded Tomcat server (no need to install Tomcat separately!)
+            - Think of it as Express.js for Java
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--
+            2. Spring Data MongoDB Starter
+            - Gives us: MongoRepository (pre-built CRUD methods)
+            - Auto-connects to MongoDB using application.properties
+            - Think of it as Mongoose for Java
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+
+        <!--
+            3. Spring Boot DevTools (Optional but helpful)
+            - Auto-restarts server when code changes (like nodemon)
+            - Only active during development
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!--
+            4. Spring Boot Test Starter
+            - For writing unit tests (we won't focus on this now)
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!-- Build Plugin: Packages our app as a runnable JAR file -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
