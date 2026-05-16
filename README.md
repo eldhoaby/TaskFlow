@@ -38,7 +38,6 @@ This project was developed to showcase practical application of Java Full Stack 
 - **Complete CRUD Operations:** Create, Read, Update, and Delete tasks efficiently.
 - **RESTful API:** Structured and predictable endpoints adhering to REST principles.
 - **Responsive UI:** Seamless experience across desktop, tablet, and mobile devices.
-- **Dynamic Theming:** Built-in Light and Dark mode support for enhanced accessibility.
 - **Real-time State Management:** Immediate UI updates upon API success.
 - **Error Handling & Load States:** Graceful degradation and user feedback during network operations.
 
@@ -63,13 +62,8 @@ This project was developed to showcase practical application of Java Full Stack 
 ## 📸 Screenshots
 
 <div align="center">
-
-| 🌙 Dark Mode | ☀️ Light Mode |
-|:---:|:---:|
-| <img src="./docs/dark_mode.png" alt="TaskFlow Dark Mode" width="400"/> | <img src="./docs/light_mode.png" alt="TaskFlow Light Mode" width="400"/> |
-
+  <img src="./docs/app_screenshot.png" alt="TaskFlow Application" width="800"/>
 </div>
-
 ## 🚀 Getting Started
 
 Follow these steps to run the project locally on your machine.
