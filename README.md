@@ -62,7 +62,19 @@ This project was developed to showcase practical application of Java Full Stack 
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="./docs/app_screenshot.png" alt="TaskFlow Application" width="800"/>
+
+### Read Operations
+<img src="./docs/crud_read.png" alt="Read Tasks" width="800"/>
+
+### Create Operations
+<img src="./docs/crud_create.png" alt="Create Task" width="800"/>
+
+### Update Operations
+<img src="./docs/crud_update.png" alt="Update Task" width="800"/>
+
+### Delete Operations
+<img src="./docs/crud_delete.png" alt="Delete Task" width="800"/>
+
 </div>
 ## 🚀 Getting Started
 
